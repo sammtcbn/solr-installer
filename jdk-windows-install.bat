@@ -20,6 +20,8 @@ if not exist %dlfile% (
     goto End
 )
 
+%dlfile% /s
+
 :END
 echo bye
 timeout /t 3

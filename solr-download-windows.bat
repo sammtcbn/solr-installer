@@ -8,11 +8,11 @@ set dlfile=solr-%dlver%.tgz
 set dlurl=https://archive.apache.org/dist/solr/solr/%dlver%/%dlfile%
 set foldername=solr-%dlver%
 
-if not exist "C:\Program Files\7-Zip\7z.exe" (
-    echo Please install 7-Zip first.
-	pause
-	got End
-)
+rem if not exist "C:\Program Files\7-Zip\7z.exe" (
+rem     echo Please install 7-Zip first.
+rem 	pause
+rem 	got End
+rem )
 
 curl --fail --output %dlfile% %dlurl%
 if %errorlevel% neq 0 (

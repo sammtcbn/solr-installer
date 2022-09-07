@@ -3,10 +3,16 @@ set currdir=%~dp0
 IF "%currdir:~-1%"=="\" SET currdir=%currdir:~0,-1%
 cd /d "%currdir%"
 
-set dlver=8.10.1
-set dlfile=solr-%dlver%.zip
-set dlurl=https://archive.apache.org/dist/lucene/solr/8.10.1/%dlfile%
+set dlver=9.0.0
+set dlfile=solr-%dlver%.tgz
+set dlurl=https://archive.apache.org/dist/solr/%dlver%/%dlfile%
 set foldername=solr-%dlver%
+
+if not exist "C:\Program Files\7-Zip\7z.exe" (
+    echo Please install 7-Zip first.
+	pause
+	got End
+)
 
 curl --fail --output %dlfile% %dlurl%
 if %errorlevel% neq 0 (
@@ -21,7 +27,8 @@ if not exist %dlfile% (
     goto End
 )
 
-powershell -command "Expand-Archive -Force %dlfile% ."
+rem powershell -command "Expand-Archive -Force %dlfile% ."
+tar zxfv %dlfile%
 
 if not exist %foldername%\bin\solr (
     echo Fail to extract %dlfile%

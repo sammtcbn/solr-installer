@@ -3,9 +3,9 @@ set currdir=%~dp0
 IF "%currdir:~-1%"=="\" SET currdir=%currdir:~0,-1%
 cd /d "%currdir%"
 
-set dlver=17
+set dlver=18
 set dlfile=jdk-%dlver%_windows-x64_bin.exe
-set dlurl=https://download.oracle.com/java/17/latest/%dlfile%
+set dlurl=https://download.oracle.com/java/%dlver%/latest/%dlfile%
 
 curl --fail --output %dlfile% %dlurl%
 if %errorlevel% neq 0 (

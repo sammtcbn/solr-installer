@@ -1,6 +1,6 @@
 solr-installer
 
-This repository helps you install solr on Windows and run solr as a Windows service.
+This repository helps you install Solr 9.0.0 on Windows and run Solr as a Windows service.
 
 ## Install
 
@@ -16,7 +16,7 @@ If jdk is not installed in your system, please install it first as following ste
 
 In solr-installer folder, run windows_install.bat as administrator.
 
-solr will be installed at C:\solr
+Solr will be installed at C:\solr
 
 ## Uninstall 
 

@@ -5,7 +5,7 @@ cd /d "%currdir%"
 
 set dlver=9.0.0
 set dlfile=solr-%dlver%.tgz
-set dlurl=https://archive.apache.org/dist/solr/%dlver%/%dlfile%
+set dlurl=https://archive.apache.org/dist/solr/solr/%dlver%/%dlfile%
 set foldername=solr-%dlver%
 
 if not exist "C:\Program Files\7-Zip\7z.exe" (

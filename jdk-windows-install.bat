@@ -5,7 +5,7 @@ cd /d "%currdir%"
 
 set dlver=18
 set dlfile=jdk-%dlver%_windows-x64_bin.exe
-set dlurl=https://download.oracle.com/java/%dlver%/latest/%dlfile%
+set dlurl=https://download.oracle.com/java/%dlver%/archive/%dlfile%
 
 curl --fail --output %dlfile% %dlurl%
 if %errorlevel% neq 0 (

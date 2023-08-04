@@ -3,7 +3,7 @@ set currdir=%~dp0
 IF "%currdir:~-1%"=="\" SET currdir=%currdir:~0,-1%
 cd /d "%currdir%"
 
-set dlver=9.0.0
+set dlver=9.3.0
 set dlfile=solr-%dlver%.tgz
 set dlurl=https://archive.apache.org/dist/solr/solr/%dlver%/%dlfile%
 set foldername=solr-%dlver%
